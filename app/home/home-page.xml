@@ -2,7 +2,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
     <ActionBar title="NativeFlix" />
 
-    <StackLayout height="100%">
+    <StackLayout id="homeStackLayout" height="100%">
+        <Button text="Bad error" tap="{{ onBadError }}" />
+        <Button text="Redirect..." tap="{{ onRedirect }}" />
+        <Button text="Redirect external..." tap="{{ onRedirectExternal }}" />
+        <Button text="1. Write File" tap="{{ onWriteFile }}" />
+        <Button text="2. Read File" tap="{{ onReadFile }}" />
+        <Button text="Intensive computation" tap="{{ onIntensiveComputation }}" />
+        <Button text="Infinite loop" tap="{{ onInifinityLoop }}" />
         <ListView height="100%" separatorColor="transparent" items="{{ flicks }}" itemTap="{{ onFlickTap }}">
             <ListView.itemTemplate>
                 <GridLayout height="280" borderRadius="10" class="bg-secondary" rows="*, auto, auto" columns="*" margin="5 10" padding="0">
